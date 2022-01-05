@@ -14,10 +14,14 @@ int main()
     int x,y,z;
     int temp;
     ifstream fp;
+    ofstream of;
     string filename;
     cout << "pleas enter filename : ";
     cin >> filename;
     fp.open(filename.c_str());
+    filename.erase(0,2);
+    filename="out"+filename;
+    of.open(filename.c_str());
     //fp>>x;
     //cout<<x<<endl;
     fp.getline(str,100);
@@ -71,10 +75,14 @@ int main()
         for(int j=0;j<order.size();j++)
         {
               cout<<order[j]<<" ";
+              of<<order[j]<<" ";
         }
         cout<<endl;
+        of<<endl;
 
         
         
     }
+    fp.close();
+    of.close();
 }

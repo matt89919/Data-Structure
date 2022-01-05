@@ -8,7 +8,7 @@
 #include <cstring>
 using namespace std;
 
-
+vector<int>oder;
 
 class node
 {
@@ -78,12 +78,14 @@ void postorderT(node *node)
     postorderT(node->left);
     postorderT(node->right);
     cout<<node->getdata()<<" ";
+    oder.push_back(node->getdata());
 }
 
 void preorderT(node *node)
 {
     if(node==NULL)  return;
     cout<<node->getdata()<<" ";
+    oder.push_back(node->getdata());
     preorderT(node->left);
     preorderT(node->right);
 }
@@ -98,10 +100,14 @@ int main()
     int inorder[1000]={0};
     int x,y,n;
     ifstream fp;
+    ofstream of;
     string filename;
     cout << "pleas enter filename : ";
     cin >> filename;
     fp.open(filename.c_str());
+    filename.erase(0,2);
+    filename="out"+filename;
+    of.open(filename.c_str());
 
     //readfile
     fp.getline(str,100);
@@ -142,6 +148,8 @@ int main()
             token=strtok(NULL," ");
         }
         //cout<<endl;
+
+        oder.clear();
         if(y==1)
         {
             index=0;
@@ -155,11 +163,18 @@ int main()
             preorderT(root);
         }   
         cout<<endl; 
+
+        for(int o=0;o<oder.size();o++)
+        {
+            of<<oder[o]<<" ";
+        }
+        of<<endl;
         
             
     }
     
-
+    fp.close();
+    of.close();
 
 
 
