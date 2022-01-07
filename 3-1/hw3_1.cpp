@@ -92,7 +92,6 @@ void preorderT(node *node)
 
 int main()
 {
-    
     char str[2000];
     char* token;
     int preorder[1000]={0};
@@ -102,7 +101,7 @@ int main()
     ifstream fp;
     ofstream of;
     string filename;
-    cout << "pleas enter filename : ";
+    cout << "please enter filename : ";
     cin >> filename;
     fp.open(filename.c_str());
     filename.erase(0,2);
@@ -176,8 +175,6 @@ int main()
     fp.close();
     of.close();
 
-
-
     /*
     int inorder[] = { 4, 2, 1, 7, 5, 8, 3, 6 };
     int preorder[] = { 1, 2, 4, 3, 5, 7, 8, 6 };
@@ -194,5 +191,4 @@ int main()
  
     return 0;
     */
-
 }

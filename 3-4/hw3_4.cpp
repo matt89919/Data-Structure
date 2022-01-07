@@ -81,7 +81,7 @@ int main()
     ifstream fp;
     ofstream of;
     string filename;
-    cout << "pleas enter filename : ";
+    cout << "please enter filename : ";
     cin >> filename;
     fp.open(filename.c_str());
     filename.erase(0,2);
@@ -146,6 +146,8 @@ int main()
 
     cout<<sum;
     of<<sum;
+    fp.close();
+    of.close();
 /*
     temp=new weight(1,5,10);
     w.push_back(*temp);

@@ -79,9 +79,7 @@ int main()
         }
         cout<<endl;
         of<<endl;
-
-        
-        
+ 
     }
     fp.close();
     of.close();
