@@ -101,7 +101,7 @@ int main()
     }
 
     fp.getline(str,1000000);
-    z=atoi(str);
+    z=atoi(str);        //z=starting vertix
     
     dfs(z);
 

@@ -109,7 +109,7 @@ int main()
     of.open(filename.c_str());
 
     //readfile
-    fp.getline(str,100);
+    fp.getline(str,1000);
     x=atoi(str);
 
     for(int i=0;i<x;i++)
@@ -138,7 +138,7 @@ int main()
         }
         //cout<<endl;
         //fourth line
-        fp.getline(str,1000);
+        fp.getline(str,2000);
         token=strtok(str," ");
         for(int k=0;k<n;k++)
         {

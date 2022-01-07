@@ -75,7 +75,7 @@ int main()
         unitable[i]=-1;
         size[i]=1;
     }
-    char str[1000];
+    char str[2000001];
     char* token;
     int x,y,z;
     ifstream fp;
@@ -89,7 +89,7 @@ int main()
     of.open(filename.c_str());
     //fp>>x;
     //cout<<x<<endl;
-    fp.getline(str,100);
+    fp.getline(str,2000001);
     token=strtok(str," ");
     x=atoi(token);              //x=# of vertice
     token=strtok(NULL," ");
@@ -103,7 +103,7 @@ int main()
     //create edge weight table
     for(int i=0;i<y;i++)
     {
-        fp.getline(str,100);
+        fp.getline(str,2000001);
         token=strtok(str," ");
         edg1=atoi(token);
         token=strtok(NULL," ");
@@ -119,7 +119,7 @@ int main()
     
 
     int index=0;
-    int sum=0;
+    long int sum=0;
     temp=new weight(-1,-1,-1);
     
     //cout<<"1";

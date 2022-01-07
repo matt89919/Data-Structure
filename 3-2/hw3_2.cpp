@@ -16,7 +16,7 @@ int main()
     ifstream fp;
     ofstream of;
     string filename;
-    cout << "pleas enter filename : ";
+    cout << "please enter filename : ";
     cin >> filename;
     fp.open(filename.c_str());
     filename.erase(0,2);
@@ -24,7 +24,7 @@ int main()
     of.open(filename.c_str());
     //fp>>x;
     //cout<<x<<endl;
-    fp.getline(str,100);
+    fp.getline(str,1000);
     x=atoi(str);
     //cout<<x<<endl;
     for(int i=0;i<x;i++)
@@ -32,7 +32,7 @@ int main()
         int m[100][100]={0};        //adjacency matrix
         int isvisted[100]={0};  
         vector<int>order;
-        fp.getline(str,200);
+        fp.getline(str,1000);
         token=strtok(str," ");
         y=atoi(token);           //y= # of V
         token=strtok(NULL," ");
@@ -41,7 +41,7 @@ int main()
         //create adjacency matrix
         for(int j=0;j<y;j++)
         {
-            fp.getline(str,200);
+            fp.getline(str,1000);
             token=strtok(str," ");
             for(int k=0;k<y;k++)
             {
